@@ -1,3 +1,8 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+# Игнорировать файл .env
+.env
+
+# Игнорировать директорию с медиафайлами
+/media/
