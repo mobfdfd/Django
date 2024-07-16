@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .cart-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 1rem;
+        }
+        .cart-item-details {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Shopping Cart</h1>
+        <div class="cart-items">
+            {% for item in cart_items %}
+            <div class="cart-item">
+                <img src="{{ item.product.image_url.url }}" alt="{{ item.product.brand }}" onerror="this.src='https://via.placeholder.com/100'">
+                <div class="cart-item-details">
+                    <h5>{{ item.product.brand }} - {{ item.product.article }}</h5>
+                    <p>Price: {{ item.product.price }} ₽</p>
+                    <p>Quantity: {{ item.quantity }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

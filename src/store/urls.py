@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path
-from app.views import index
+from app.views import index, ShoppingCartList, cart_view
 
 urlpatterns = [
     path('', index, name='index'),
-    path('admin/', admin.site.urls),
     path("index/", index, name="index"),
+    path('admin/', admin.site.urls),
+    path('api/cart/<int:customer_id>/', ShoppingCartList.as_view(), name='shopping_cart_list'),
+    path('cart/<int:customer_id>/', cart_view, name='cart_view'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
