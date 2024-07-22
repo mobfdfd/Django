@@ -1,0 +1,9 @@
+2024-07-22 16:48:11,431 - INFO - Incoming request: GET /
+2024-07-22 16:48:27,340 - INFO - Incoming request: GET /admin/
+2024-07-22 16:48:33,268 - INFO - Incoming request: GET /admin/app/customer/add/
+2024-07-22 16:48:33,395 - INFO - Incoming request: GET /admin/jsi18n/
+2024-07-22 16:48:36,115 - INFO - Incoming request: POST /admin/app/customer/add/
+2024-07-22 16:48:36,218 - INFO - Incoming request: GET /admin/app/customer/
+2024-07-22 16:48:36,366 - INFO - Incoming request: GET /admin/jsi18n/
+2024-07-22 16:49:23,994 - INFO - Incoming request: GET /admin/
+2024-07-22 16:49:24,690 - INFO - Incoming request: GET /1
